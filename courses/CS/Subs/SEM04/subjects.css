@@ -1,0 +1,105 @@
+ body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #020B1F;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+      flex-direction: column;
+    }
+
+    h1 {
+      margin-bottom: 40px;
+      margin-left: 18px;
+     height: 0%;
+    }
+ h3 {
+      
+      text-align: relative;
+      opacity: 0.6;
+    }
+
+
+    .dropdown {
+      width: 240px;
+      margin: 10px 0;
+      position: relative;
+    }
+
+    .dropdown-btn {
+      background: linear-gradient(90deg, #aa4dc8, #f08fb3);
+      border: none;
+      border-radius: 16px;
+      padding: 10px 12px;
+      font-size: 18px;
+      color: white;
+      cursor: pointer;
+      position: relative;
+      width: 100%;
+      text-align: center;
+      font-weight: 40px;
+      
+    }
+
+    .icon {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .dropdown-content {
+      display: none;
+      flex-direction: column;
+      background: linear-gradient(90deg, #aa4dc8, #f08fb3);
+      border-radius: 12px;
+      margin-top: 5px;
+      padding: 5px;
+      width: 252px;
+      
+      
+     
+    }
+
+    .dropdown-content div {
+      background: linear-gradient(90deg, #14d88c, #096bf7);
+      border-radius: 25px;
+      padding: 10px;
+      margin: 2px;
+      text-align: center;
+      color: white;
+      font-weight: 500;
+      cursor: pointer;
+     
+    }
+    .dropdown-content a {
+      text-decoration: none;
+      display: block;
+      color: white;
+    }
+
+    .dropdown.active .dropdown-content {
+      display: flex;
+     
+    }
+
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: #4a3edb;
+      border: none;
+      border-radius: 8px;
+      padding: 5px 10px;
+      color: white;
+      cursor: pointer;
+    }
+    .back-button a {
+      text-decoration: none;
+      display: block;
+    
+      color: white;
+    }
+  

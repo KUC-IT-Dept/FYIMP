@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Select Subject</title>
+  <link rel="stylesheet" href="subjects.css" />
+   
+</head>
+<body>
+
+  <button class="back-button"><a href="../../../CS/year-sem/year-sem.html">&#8592;</a></button>
+  <h1>Select Subject</h1>
+  <h3>First Year-semester 1</h3>
+
+  <div class="dropdown" onclick="toggleDropdown(this)">
+    <div class="dropdown-btn">Core <span class="icon">&#9660;</span></div>
+    <div class="dropdown-content">
+      <div><a href="./core/Math/math.html">Mathematics</a></div>
+      <div><a href="#">Computer Science</div>
+      <div><a href="#">Statistics</a></div>
+    </div>
+  </div>
+
+  <div class="dropdown" onclick="toggleDropdown(this)">
+    <div class="dropdown-btn">MDC <span class="icon">&#9660;</span></div>
+    <div class="dropdown-content">
+      <div><a href="#">Physical Education</a></div>
+      <div><a href="#">Psychology</a></div>
+    </div>
+  </div>
+
+  <div class="dropdown" onclick="toggleDropdown(this)">
+    <div class="dropdown-btn">AEC <span class="icon">&#9660;</span></div>
+    <div class="dropdown-content">
+      <div><a href="#">English</a></div>
+      <div><a href="#">Malayalam</a></div>
+      <div><a href="#">Hindi</a></div>
+    </div>
+  </div>
+
+  <script>
+    function toggleDropdown(dropdown) {
+      const allDropdowns = document.querySelectorAll('.dropdown');
+      allDropdowns.forEach(d => {
+        if (d !== dropdown) d.classList.remove('active');
+      });
+      dropdown.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
