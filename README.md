@@ -25,7 +25,7 @@
 - Ensure all syllabus, notes, and related files are stored inside a folder named **`data`**.
 
 ✔️ **CSS Integration:**  
-- Every HTML file should have its corresponding CSS file located within the same folder.
+- Every HTML file should have its corresponding CSS file located within the same  folder.
 
 ## 🔗 Figma Design Reference  
 You can access the project design on Figma [here](https://www.figma.com/design/UHBGalaTnPrVhlKs6YvMFl/Untitled?node-id=0-1&t=bN5ni6sFKn8e1tXE-1).
