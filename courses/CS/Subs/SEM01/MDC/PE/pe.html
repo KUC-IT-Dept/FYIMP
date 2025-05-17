@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physical Education</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="pe.css">
+</head>
+
+<body>
+    <!--top navigation with back button-->
+    <div class="top">
+        <a href="../../subjects.html" class="back-button">
+            <i class="bi bi-arrow-left"></i>
+        </a>
+    </div>
+    
+    <!-- heading section -->
+    <h1>Physical Education</h1>
+    <h4>First Year - Semester 01</h4>
+    
+    <!--hero section that contain the main theam-->
+    <div class="Main">
+      
+      <!--div that contain all the things about paper1-->
+     <div class="main paper1">
+            <!-- dropdown button-->
+    <div onclick="toggle_nav_one()"class="main-top dropdown-btn">
+        <h3>Paper 01</h3>
+        <i id="drop"class="bi bi-caret-down-fill"></i>
+    </div>
+           <!--dropdown contents-->
+    <div class="drop_content_one">  
+        <ul class="paper-nav">
+            <li class="notes">Notes</li>
+            <li class="Syllabus">Syllabus</li>
+            <li class="pyq">PYQ</li>
+        </ul>
+    <div class="note-list">
+        <a href="#" class="note-link">Note 1.pdf <i class="bi bi-download"></i></a>
+        <a href="#" class="note-link">Note 2.pdf <i class="bi bi-download"></i></a>
+        <a href="#" class="note-link">Note 3.pdf <i class="bi bi-download"></i></a>
+    </div>
+      
+    </div>
+
+</div>
+
+   <!--div that contain all the things about paper2-->
+  <div class="main paper2">
+        <!-- dropdown button-->
+    <div onclick="toggle_nav()" class="main-top dropdown-btn">
+        <h3>Paper 02</h3>
+        <i id="two"class="bi bi-caret-down-fill"></i>
+    </div>
+        <!-- dropdown contents-->
+    <div class="drop_content">
+        <ul class="paper-nav">
+            <li class="notes">Notes</li>
+            <li class="Syllabus">Syllabus</li>
+            <li class="pyq">PYQ</li>
+        </ul>
+    <div class="note-list">
+        <a href="#" class="note-link">Note 1.pdf <i class="bi bi-download"></i></a>
+        <a href="#" class="note-link">Note 2.pdf <i class="bi bi-download"></i></a>
+        <a href="#" class="note-link">Note 3.pdf <i class="bi bi-download"></i></a>
+    </div>
+    </div>
+
+</div>
+
+    </div>
+    <script>
+  let toggleOne = false;
+  let toggleTwo = false;
+  
+  let toggle_nav_one = function() {
+    let drop_content_one = document.querySelector(".drop_content_one"); 
+    let arrow= document.getElementById("drop");
+    if (toggleOne === false) {
+      drop_content_one.style.height = "max-content"; 
+      arrow.classList.remove("bi-caret-down-fill");
+      arrow.classList.add("bi-caret-up-fill");
+      toggleOne = true;
+    } else {
+      drop_content_one.style.height = "0";
+      arrow.classList.remove("bi-caret-up-fill");
+      arrow.classList.add("bi-caret-down-fill");
+      toggleOne = false;
+    }
+  }
+
+  let toggle_nav = function() {
+    let drop_content = document.querySelector(".drop_content");
+  let two= document.getElementById("two");
+    if (toggleTwo === false) {
+      drop_content.style.height = "max-content";
+      two.classList.remove("bi-caret-down-fill");
+      two.classList.add("bi-caret-up-fill");
+      toggleTwo = true;
+    } else {
+      drop_content.style.height = "0";
+      two.classList.remove("bi-caret-up-fill");
+      two.classList.add("bi-caret-down-fill");
+      toggleTwo = false;
+    }
+  }
+</script>
+
+</body>
+
+</html>
