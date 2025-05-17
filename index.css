@@ -23,7 +23,7 @@ center {
   display: block;
 }
 
-button {
+button ,a{
   width: 400px;
   padding: 20px;
   margin: 10px;
@@ -37,18 +37,18 @@ button {
 }
 
 
-button:first-of-type {
+button,a:first-of-type {
   background: linear-gradient(to right,#7b61ff, #ff5ec4);
 }
 
 
-button:last-of-type {
+button,a:last-of-type {
   background: linear-gradient(to right, #7b61ff, #ff5ec4);
 }
 
 
 
-button:hover {
+button,a :hover {
   transform: scale(1.05);
 }
 
