@@ -1,6 +1,6 @@
 വെബ്സൈറ്റിന്റെ കോലം : [FYIMP](https://shad-ct.github.io/FYIMP/)
 
-# 📁 Project Structure Overview
+# 📁  Project Structure Overview
 
 ## 📌 Folder & File Explanation:
 
