@@ -49,13 +49,19 @@ body {
 
 .main-top {
     background: linear-gradient(to right ,#9a37f8,violet);
-    width:270px;
+    width: 270px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     border-radius: 14px;
-    padding: 8px 13px 8px 95px;
+    padding: 8px 13px;
     box-sizing: border-box;
+}
+
+.main-top h3 {
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
 }
 
 .paper-nav {
