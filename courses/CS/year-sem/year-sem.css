@@ -9,7 +9,7 @@ body {
       height: 100vh;
     }
 .back-button {
-  background-color: #5c4dff;  
+  background: linear-gradient(to bottom ,violet, #0b0e1c);
   color: white;              
   border: none;
   border-radius: 10px;
