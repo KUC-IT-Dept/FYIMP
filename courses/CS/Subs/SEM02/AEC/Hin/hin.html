@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="hin.css">
+</head>
+
+<body>
+    <!--top navigation with back button-->
+    <div class="top">
+        <a href="../../subjects.html" class="back-button">
+            <i class="bi bi-arrow-left"></i>
+        </a>
+    </div>
+
+    <!-- heading section -->
+    <h1>HINDI</h1>
+    <h4>First Year - Semester 02</h4>
+
+    <!--hero section that contain the main theam-->
+    <div class="Main">
+
+        <!--div that contain all the things about paper1-->
+        <div class="main paper1">
+            <!-- dropdown button-->
+            <div onclick="toggle_nav_one()" class="main-top dropdown-btn">
+                <h3>KU02AECHIN103: COMMUNICATIVE HINDI</h3>
+                <i id="drop" class="bi bi-caret-down-fill"></i>
+            </div>
+            <!--dropdown contents-->
+            <div class="drop_content_one">
+                <ul class="paper-nav">
+                    <li class="nav-item active" onclick="showContent('notes-content-1')">Notes</li>
+                    <li class="nav-item" onclick="showContent('syllabus-content-1')">Syllabus</li>
+                    <li class="nav-item" onclick="showContent('pyq-content-1')">PYQ</li>
+                </ul>
+
+                <div id="notes-content-1" class="content-section active note-list">
+                    <a href="./data/note.pdf" class="note-link" download>NOTE1.pdf <i class="bi bi-download"></i></a>
+                     <a href="./data/note_1.pdf" class="note-link" download>NOTE2.pdf <i class="bi bi-download"></i></a>
+                      <a href="./data/aec hindi.pdf" class="note-link" download>NOTE3.pdf <i class="bi bi-download"></i></a>
+                       <a href="./data/varthaalaap.pdf" class="note-link" download>Vaarthalaap.pdf <i class="bi bi-download"></i></a>
+
+                    </div>
+
+                    <div id="syllabus-content-1" class="content-section note-list">
+                    <a href="./data/syllabus.jpeg" class="note-link" download>syllabus.jpeg <i
+                            class="bi bi-download"></i></a>
+                    </div>
+               <div id="pyq-content-1" class="content-section note-list">
+                    <a href="./data/qp.pdf" class="pyq-link" download>
+                        <img src="./data/syllabus.jpeg" alt="2022 Question Paper"class="pyq-preview">
+                        <div class="pyq-info">
+                            <span>2024 Question Paper</span>
+                            <i class="bi bi-download"></i>
+                        </div>
+                    </a>
+
+                    
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <!-- Add modal structure -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img id="modalImage" src="" alt="Preview">
+        </div>
+    </div>
+
+    <script>
+        let toggleOne = false;
+        let toggleTwo = false;
+
+        function showContent(contentId) {
+            // Get the paper section (1 or 2) from the content ID
+            const paperSection = contentId.endsWith('2') ? '.drop_content' : '.drop_content_one';
+
+            // Hide all content sections within the current paper section
+            document.querySelector(paperSection).querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // Remove active class from nav items within the current paper section
+            document.querySelector(paperSection).querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Show selected content and activate nav item
+            document.getElementById(contentId).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        let toggle_nav_one = function () {
+            let drop_content_one = document.querySelector(".drop_content_one");
+            let arrow = document.getElementById("drop");
+            if (toggleOne === false) {
+                drop_content_one.style.height = "max-content";
+                arrow.classList.remove("bi-caret-down-fill");
+                arrow.classList.add("bi-caret-up-fill");
+                toggleOne = true;
+            } else {
+                drop_content_one.style.height = "0";
+                arrow.classList.remove("bi-caret-up-fill");
+                arrow.classList.add("bi-caret-down-fill");
+                toggleOne = false;
+            }
+        }
+
+        let toggle_nav = function () {
+            let drop_content = document.querySelector(".drop_content");
+            let two = document.getElementById("two");
+            if (toggleTwo === false) {
+                drop_content.style.height = "max-content";
+                two.classList.remove("bi-caret-down-fill");
+                two.classList.add("bi-caret-up-fill");
+                toggleTwo = true;
+            } else {
+                drop_content.style.height = "0";
+                two.classList.remove("bi-caret-up-fill");
+                two.classList.add("bi-caret-down-fill");
+                toggleTwo = false;
+            }
+        }
+
+        // Add modal functionality
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const closeBtn = document.querySelector('.close-btn');
+
+        // Add click handlers to all preview images
+        document.querySelectorAll('.pyq-preview').forEach(img => {
+            img.addEventListener('click', function (e) {
+                e.preventDefault();
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+            });
+        });
+
+        // Close modal when clicking close button or outside
+        closeBtn.onclick = () => modal.style.display = "none";
+        modal.onclick = (e) => {
+            if (e.target === modal) modal.style.display = "none";
+        };
+    </script>
+
+</body>
+
+</html>
