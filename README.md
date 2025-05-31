@@ -1,4 +1,4 @@
-വെബ്സൈറ്റിന്റെ കോലം : [FYIMP](https://shad-ct.github.io/FYIMP/)
+വെബ്സൈറ്റിന്റെ കോലം : [FYIMP](https://kuc-it-dept.github.io/FYIMP/)
 
 # 📁  Project Structure Overview
 
